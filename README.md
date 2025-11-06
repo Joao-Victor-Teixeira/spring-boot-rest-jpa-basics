@@ -47,7 +47,7 @@ A API expõe os seguintes endpoints REST para interagir com os dados:
 
 2.  **Clone o Repositório:**
     ```bash
-    git clone [https://github.com/Joao-Victor-Teixeira/NOME-DO-SEU-REPOSITORIO.git](https://github.com/Joao-Victor-Teixeira/NOME-DO-SEU-REPOSITORIO.git)
+    git clone [https://github.com/Joao-Victor-Teixeira/NOME-DO-SEU-REPOSITORIO.git](https://github.com/Joao-Victor-Teixeira/spring-boot-rest-jpa-basics.git)
     cd spring-boot-basic
     ```
 
