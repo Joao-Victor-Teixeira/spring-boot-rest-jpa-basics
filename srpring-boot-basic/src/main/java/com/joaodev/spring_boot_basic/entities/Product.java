@@ -1,33 +1,24 @@
 package com.joaodev.spring_boot_basic.entities;
 
 import java.io.Serializable;
-import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
-
-
-import java.util.ArrayList;
-
-public class Category implements Serializable {
+public class Product implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private Long id; 
+    private Long id;
     private String name;
+    private Double price;
 
+    private Category category;
 
-   
-    @JsonIgnore
-    private List<Product> products = new ArrayList<>();
-    
-
-    public Category(){
-        
+    public Product(){
     }
 
-    public Category(Long id, String name) {
+    public Product(Long id, String name, Double price, Category category) {
         this.id = id;
         this.name = name;
+        this.price = price;
+        this.category = category;
     }
 
     public Long getId() {
@@ -46,10 +37,22 @@ public class Category implements Serializable {
         this.name = name;
     }
 
-    
-    public List<Product> getProducts() {
-    return products;
+    public Double getPrice() {
+        return price;
     }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
 
     @Override
     public int hashCode() {
@@ -67,7 +70,7 @@ public class Category implements Serializable {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        Category other = (Category) obj;
+        Product other = (Product) obj;
         if (id == null) {
             if (other.id != null)
                 return false;
@@ -76,4 +79,5 @@ public class Category implements Serializable {
         return true;
     }
 
+    
 }
